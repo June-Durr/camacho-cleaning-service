@@ -6,10 +6,10 @@ const LeadCaptureForm = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [reportTypes, setReportTypes] = useState({
-    propertyReport: true,
-    miniPropertyReport: false,
-    neighborhoodReport: true,
-    marketActivityReport: false,
+    carpet: true,
+    waxing: false,
+    commercialCleaning: true,
+    residentialCleaning: false,
   });
 
   const handleReportTypeChange = (event) => {
@@ -98,10 +98,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-cente p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="carpet"
+                name="carpet"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.carpet}
                 onChange={handleReportTypeChange}
               />
               Carpet
@@ -109,10 +109,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-center p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="waxing"
+                name="waxing"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.waxing}
                 onChange={handleReportTypeChange}
               />
               Waxing
@@ -120,10 +120,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-center p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="commercialCleaning"
+                name="commercialCleaning"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.commercialCleaning}
                 onChange={handleReportTypeChange}
               />
               Commercial Cleaning
@@ -131,10 +131,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-center p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="residentialCleaning"
+                name="residentialCleaning"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.residentialCleaning}
                 onChange={handleReportTypeChange}
               />
               Residential Cleaning

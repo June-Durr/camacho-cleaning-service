@@ -44,26 +44,48 @@ const LeadCaptureForm = () => {
               onChange={(e) => setFirstName(e.target.value)}
               required
             />
-            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+            <label htmlFor="lastName" className="block text-primary font-bold mb-2">
               Last Name
             </label>
             <input
               type="text"
-              id="firstName"
+              id="LastName"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               required
             />
-            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+            <label htmlFor="email" className="block text-primary font-bold mb-2">
               E-mail
             </label>
             <input
               type="text"
-              id="firstName"
+              id="email"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+              Phone
+            </label>
+            <input
+              type="text"
+              id="phone"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+              Report Types
+            </label>
+            <input
+              type="text"
+              id="reportTypes"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={reportTypes}
+              onChange={(e) => setReportTypes(e.target.value)}
               required
             />
           </div>

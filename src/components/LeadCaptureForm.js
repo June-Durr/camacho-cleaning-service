@@ -6,10 +6,10 @@ const LeadCaptureForm = () => {
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [reportTypes, setReportTypes] = useState({
-    propertyReport: true,
-    miniPropertyReport: false,
-    neighborhoodReport: true,
-    marketActivityReport: false,
+    carpet: true,
+    waxing: false,
+    commercialCleaning: true,
+    residentialCleaning: false,
   });
 
   const handleReportTypeChange = (event) => {
@@ -44,26 +44,48 @@ const LeadCaptureForm = () => {
               onChange={(e) => setFirstName(e.target.value)}
               required
             />
-            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+            <label htmlFor="lastName" className="block text-primary font-bold mb-2">
               Last Name
             </label>
             <input
               type="text"
-              id="firstName"
+              id="LastName"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               required
             />
-            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+            <label htmlFor="email" className="block text-primary font-bold mb-2">
               E-mail
             </label>
             <input
               type="text"
-              id="firstName"
+              id="email"
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+              Phone
+            </label>
+            <input
+              type="text"
+              id="phone"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+            <label htmlFor="firstName" className="block text-primary font-bold mb-2">
+              Report Types
+            </label>
+            <input
+              type="text"
+              id="reportTypes"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              value={reportTypes}
+              onChange={(e) => setReportTypes(e.target.value)}
               required
             />
           </div>
@@ -76,10 +98,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-cente p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="carpet"
+                name="carpet"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.carpet}
                 onChange={handleReportTypeChange}
               />
               Carpet
@@ -87,10 +109,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-center p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="waxing"
+                name="waxing"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.waxing}
                 onChange={handleReportTypeChange}
               />
               Waxing
@@ -98,10 +120,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-center p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="commercialCleaning"
+                name="commercialCleaning"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.commercialCleaning}
                 onChange={handleReportTypeChange}
               />
               Commercial Cleaning
@@ -109,10 +131,10 @@ const LeadCaptureForm = () => {
             <label htmlFor="propertyReport" className="flex items-center p-3">
               <input
                 type="checkbox"
-                id="propertyReport"
-                name="propertyReport"
+                id="residentialCleaning"
+                name="residentialCleaning"
                 className="mr-2"
-                checked={reportTypes.propertyReport}
+                checked={reportTypes.residentialCleaning}
                 onChange={handleReportTypeChange}
               />
               Residential Cleaning
